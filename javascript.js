@@ -9,7 +9,7 @@ function getComputerChoice() {
 }
 
 
-function playRound (playerSelection, computerSelection, tieCounter, lossCounter, winCounter) {
+function playRound (playerSelection, computerSelection) {
   playerSelection = prompt("What's your choice: rock, paper or scissors?");
   playerSelection = playerSelection.toLowerCase();
   computerSelection = getComputerChoice();
@@ -45,7 +45,7 @@ function playRound (playerSelection, computerSelection, tieCounter, lossCounter,
 function game() {
   let results = [];
   for (let i=0; i<5; i++) {
-    results[i] = playRound(playerSelection, computerSelection, tieCounter, lossCounter, winCounter);
+    results[i] = playRound(playerSelection, computerSelection);
     console.log(results[i]);
   }
   for (let i=0; i<5; i++) {
